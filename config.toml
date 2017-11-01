@@ -1,4 +1,4 @@
-baseURL = "https://tailor-harry-22565.netlify.com/"
+baseURL = "http://www.nicholasjacques.io/"
 builddrafts = false
 canonifyurls = false
 languageCode = "en-us"
