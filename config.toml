@@ -1,4 +1,4 @@
-baseURL = "http://nicholas.io/"
+baseURL = "http://localhost:1313/"
 builddrafts = false
 canonifyurls = false
 languageCode = "en-us"
