@@ -1,3 +1,48 @@
-baseURL = "http://example.org/"
+baseURL = "http://nicholas.io/"
+builddrafts = false
+canonifyurls = false
 languageCode = "en-us"
-title = "My New Hugo Site"
+
+contentDir = "content"
+layoutDir = "layouts"
+publishDir = "public"
+
+title = "Nicholas Jacques"
+author = "Nicholas Jacques"
+
+theme = "hugo-goa"
+
+[params]
+  author = "Nicholas Jacques"
+  intro = "Software Developer"
+  description = "Denver, CO"
+  authorimage = "headshot.jpg"
+  dateformat = "Jan 2, 2006"
+
+[params.meta]
+  description = "Nicholas Jacques Developer"
+  keywords = "software,developer,engineer,ruby,rails,blog"
+
+[params.social]
+  github = "NicholasJacques"
+  twitter = "NDJacques9"
+  instagram = "jacquesnicholas"
+  linkedin = "nicholas-jacques"
+  email = "nicholas.d.jacques@gmail.com"
+
+[params.extra]
+  copyright = "© 2017. Nicholas Jacques. [Some Rights Reserved](http://creativecommons.org/licenses/by/4.0/)."
+  poweredby = "true"
+  highlightjs = "true"
+
+[[menu.main]]
+  name = "blog"
+  weight = 100
+  identifier = "blog"
+  url = "/blog/"
+
+[[menu.main]]
+  name = "about"
+  weight = 100
+  identifier = "about"
+  url = "/about/"
