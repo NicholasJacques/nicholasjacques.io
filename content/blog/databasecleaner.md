@@ -1,7 +1,9 @@
 ---
-title: "Databasecleaner"
+title: "You (probably) don't need DatabaseCleaner"
 date: 2017-10-31T21:18:58-06:00
 draft: false
+categories: ["testing"]
+tags: ["rails", "ruby", "databasecleaner", "rspec", "capybara", "testing", "tdd"]
 ---
 
 
@@ -40,10 +42,11 @@ RSpec.configure do |config|
 end
 ```
 
-This DatabaseCleaner configuration wraps each test in a transaction by default. Cleaning with transactions is faster than cleaning with truncation because changes are not actually committed to the database. Cleaning with truncation uses a `TRUNCATE TABLE` table statement to empty the table after changes have been committed. With this configuration, DatabaseCleaner will only clean your test database with truncation when a test contains the `:js => true` flag, meaning it is not using the default driver to run the test. This solves our threading issue and ensures the test database is always wiped clean after every test.
+This DatabaseCleaner configuration wraps each test in a transaction by default and then rolls back the transaction when the test example is completed. When a test is marked with a `:js => true` flag, it will be run with a test driver other than `:rack_test`. In this case, we tell DatabaseCleaner to clean the database using truncation, since the Capybara will be interacting with your application in a seperate thread from the transaction, as I mentioned earlier. We choose to make cleaning with transactions the default strategy because rolling back a transaction is typically faster than truncating your database, which uses a `TRUNCATE TABLE` statement to wipe the database clean after the test has been run. This configuration solves our threading issue and ensures the test database is always in a clean state for each test example.
+
 
 With the release of Rails 5.1, the database connection is now [shared between the application and test threads](https://github.com/rails/rails/pull/28083). This effectively renders DatabaseCleaner obsolete. Tests using a non-default driver will be cleaned by simply setting `config.use_transactional_fixtures = true`, allowing you to safely remove the DatabaseCleaner gem from your application.
 
 ---
 
-*_`use_transactional_fixtures` was changed to `use_transactional_tests` in Rails 5.1 to [clarify its functionality](https://blog.bigbinary.com/2016/05/26/rails-5-renamed-transactional-fixtures-to-transactional-tests.html). If you are using RSpec, then it still appears as `user_transactional_fixtures` in your `rails_helper.rb` file._
+*`use_transactional_fixtures` was changed to `use_transactional_tests` in Rails 5.1 to [clarify its functionality](https://blog.bigbinary.com/2016/05/26/rails-5-renamed-transactional-fixtures-to-transactional-tests.html). If you are using RSpec, then it still appears as `use_transactional_fixtures` in your `rails_helper.rb` file.
