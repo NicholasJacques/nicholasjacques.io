@@ -4,6 +4,7 @@ date: 2017-11-02T00:51:39-06:00
 draft: false
 categories: ["testing"]
 tags: ["rails", "ruby", "databasecleaner", "rspec", "testing"]
+slug: "using-factorygirl-and-transactional-testing"
 ---
 
 ### The Problem

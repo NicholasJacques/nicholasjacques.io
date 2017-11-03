@@ -4,6 +4,7 @@ date: 2017-10-31T21:18:58-06:00
 draft: false
 categories: ["testing"]
 tags: ["rails", "ruby", "databasecleaner", "rspec", "capybara", "testing", "tdd"]
+slug: "you-probably-dont-need-databasecleaner"
 ---
 
 

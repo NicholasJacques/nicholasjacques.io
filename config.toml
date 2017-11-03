@@ -12,6 +12,9 @@ author = "Nicholas Jacques"
 
 theme = "hugo-goa"
 
+[permalinks]
+  post = "/:slug/"
+
 [params]
   author = "Nicholas Jacques"
   intro = "Software Developer"
