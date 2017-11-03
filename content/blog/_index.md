@@ -1,5 +1,6 @@
 ---
 title: "_Index"
+type: "index"
 date: 2017-11-03T14:15:29-06:00
 draft: false
 ---
