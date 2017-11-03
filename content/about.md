@@ -24,4 +24,4 @@ I'm getting better at programming with JavaScript.
 
 I'm a back-end developer at heart; but I sure like things that look nice.
 
-On the weekends you can probably find me sleeping under the stars, somewhere in the Rocky Mountains.
+On the weekends you can probably find me lost in the woods, somewhere in the Rocky Mountains
