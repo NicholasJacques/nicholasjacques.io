@@ -1,5 +1,5 @@
 ---
-title: "Using FactoryGirl without DatabaseCleaner"
+title: "Using FactoryGirl and Transactional Testing"
 date: 2017-11-02T00:51:39-06:00
 draft: false
 categories: ["testing"]
