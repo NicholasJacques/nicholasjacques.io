@@ -1,6 +1,6 @@
 ---
 title: "_Index"
-type: "index"
+type: "blog_list"
 date: 2017-11-03T14:15:29-06:00
 draft: false
 ---
