@@ -4,6 +4,7 @@ date: 2017-11-02T00:51:39-06:00
 draft: false
 categories: ["testing"]
 tags: ["rails", "ruby", "databasecleaner", "rspec", "testing"]
+slug: "using-factorygirl-and-transactional-testing"
 ---
 
 ### The Problem
@@ -145,7 +146,7 @@ This allows you to run `rake factory_girl:lint` whenever you make changes to you
 In researching for this post, I found some informative blogs on using FactoryGirl.
 
 * [Working Effectively with Data Factories Using FactoryGirl](https://semaphoreci.com/community/tutorials/working-effectively-with-data-factories-using-factorygirl)
-* [Why I don't like factory_girl](https://semaphoreci.com/community/tutorials/working-effectively-with-data-factories-using-factorygirl)
+* [Why I don't like factory_girl](http://blog.steveklabnik.com/posts/2012-07-14-why-i-don-t-like-factory_girl)
 * [Speed Up Tests by Selectively Avoiding Factory Girl](https://robots.thoughtbot.com/speed-up-tests-by-selectively-avoiding-factory-girl)
 
 ---
