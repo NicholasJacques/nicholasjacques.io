@@ -35,7 +35,7 @@ theme = "hugo-goa"
 
 [params.extra]
   copyright = "© 2017. Nicholas Jacques. [Some Rights Reserved](http://creativecommons.org/licenses/by/4.0/)."
-  poweredby = "true"
+  poweredby = "false"
   highlightjs = "true"
 
 [[menu.main]]
